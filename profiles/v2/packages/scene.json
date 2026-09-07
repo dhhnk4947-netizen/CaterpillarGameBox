@@ -1,0 +1,221 @@
+{
+  "__version__": "1.0.3",
+  "builder": {
+    "taskOptionsMap": {},
+    "__version__": "1.3.9"
+  },
+  "gizmos-infos": {
+    "is2D": true,
+    "is3DIcon": false,
+    "iconSize": 2,
+    "gridVisible": true,
+    "originAxis2D": {
+      "x_visible": true,
+      "y_visible": true,
+      "z_visible": false
+    },
+    "originAxis3D": {
+      "x_visible": true,
+      "y_visible": false,
+      "z_visible": true
+    },
+    "gridColor": [
+      166,
+      166,
+      166,
+      255
+    ],
+    "transformToolName": "position",
+    "pivot": "pivot",
+    "coordinate": "local",
+    "toolsVisibility3d": true
+  },
+  "snap-configs": {
+    "position": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "rotation": 1,
+    "scale": 1,
+    "isPositionSnapEnabled": false,
+    "isRotationSnapEnabled": false,
+    "isScaleSnapEnabled": false
+  },
+  "rect-snap-configs": {
+    "enableSnapping": true,
+    "snapThreshold": 4
+  },
+  "float-window": {
+    "position": {
+      "cc": {
+        "Camera": {
+          "dock": false,
+          "top": null,
+          "bottom": 10,
+          "left": null,
+          "right": 10
+        }
+      }
+    }
+  },
+  "camera-infos": {
+    "7104697a-127d-496f-a2f7-a6d74828e7be": {
+      "position": {
+        "x": 640,
+        "y": 359.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "contentRect": {
+        "x": 0,
+        "y": 0,
+        "width": 1786,
+        "height": 1400
+      },
+      "scale": 0.9767187500000001
+    },
+    "75a98de9-29ac-47ef-a45a-03321fb89cec": {
+      "position": {
+        "x": -7770.946620226598,
+        "y": -1458.7022697292123,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "contentRect": {
+        "x": -32647.799516976644,
+        "y": -20959.034887562397,
+        "width": 1786,
+        "height": 1400
+      },
+      "scale": 0.03589682359365734
+    },
+    "2317f699-a6e6-4222-8f59-4a6c3d6ed07a": {
+      "position": {
+        "x": 375.0000000000001,
+        "y": 668.802,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "contentRect": {
+        "x": -292,
+        "y": 293.80200000000013,
+        "width": 1250.2,
+        "height": 702.8860569715142
+      },
+      "scale": 0.9371814092953523
+    },
+    "8290b9a6-02a6-42aa-9bb4-a1783ccebaa8": {
+      "position": {
+        "x": -348.2330642029738,
+        "y": -416.7051381655983,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "contentRect": {
+        "x": -3223.06176538391,
+        "y": -3109.4355253903295,
+        "width": 1484,
+        "height": 1390
+      },
+      "scale": 0.2581023348261403
+    },
+    "dcf6db98-d350-4c82-a231-10eca887f384": {
+      "position": {
+        "x": 428.7469499088593,
+        "y": 718.1762102647351,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "contentRect": {
+        "x": -793.4621197162194,
+        "y": -426.6153037371917,
+        "width": 1484,
+        "height": 1390
+      },
+      "scale": 0.6070974421975234
+    }
+  },
+  "camera-uuids": [
+    "7104697a-127d-496f-a2f7-a6d74828e7be",
+    "75a98de9-29ac-47ef-a45a-03321fb89cec",
+    "2317f699-a6e6-4222-8f59-4a6c3d6ed07a",
+    "8290b9a6-02a6-42aa-9bb4-a1783ccebaa8",
+    "dcf6db98-d350-4c82-a231-10eca887f384"
+  ],
+  "camera": {
+    "color": [
+      48,
+      48,
+      48,
+      255
+    ],
+    "fov": 45,
+    "far": 10000,
+    "near": 0.01,
+    "wheelSpeed": 0.01,
+    "wanderSpeed": 10,
+    "enableAcceleration": true,
+    "size": "__default_design__",
+    "far2D": 10000,
+    "near2D": 1,
+    "wheelSpeed2D": 6,
+    "iso": 0,
+    "aperture": 19,
+    "shutter": 7
+  },
+  "scene_view": {
+    "isSceneLightOn": true,
+    "output_device": "__default_design__"
+  }
+}

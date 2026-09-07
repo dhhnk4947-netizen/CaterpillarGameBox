@@ -1,0 +1,90 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "icon010",
+    "atlas": "",
+    "rect": {
+      "x": 0,
+      "y": 0,
+      "width": 47,
+      "height": 59
+    },
+    "offset": {
+      "x": 0,
+      "y": 0
+    },
+    "originalSize": {
+      "width": 47,
+      "height": 59
+    },
+    "rotated": false,
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "vertices": {
+      "rawPosition": [
+        -23.5,
+        -29.5,
+        0,
+        23.5,
+        -29.5,
+        0,
+        -23.5,
+        29.5,
+        0,
+        23.5,
+        29.5,
+        0
+      ],
+      "indexes": [
+        0,
+        1,
+        2,
+        2,
+        1,
+        3
+      ],
+      "uv": [
+        0,
+        59,
+        47,
+        59,
+        0,
+        0,
+        47,
+        0
+      ],
+      "nuv": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "minPos": {
+        "x": -23.5,
+        "y": -29.5,
+        "z": 0
+      },
+      "maxPos": {
+        "x": 23.5,
+        "y": 29.5,
+        "z": 0
+      }
+    },
+    "texture": "f5d5c6b6-1035-42c5-b12e-27d84423fac6@6c48a",
+    "packable": true,
+    "pixelsToUnit": 100,
+    "pivot": {
+      "x": 0.5,
+      "y": 0.5
+    },
+    "meshType": 0
+  }
+}
