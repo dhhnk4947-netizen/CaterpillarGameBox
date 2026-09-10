@@ -1741,5 +1741,17 @@
       ]
     },
     "versionCode": 1
+  },
+  "708ff37f-b8eb-427a-aa1e-be457b98718e": {
+    "url": "db://assets/Common/main.scene",
+    "value": {
+      "depends": [
+        "7d8f9b89-4fd1-4c9f-a3ab-38ec7cded7ca@f9941"
+      ],
+      "dependScripts": [
+        "eac8eb55-3625-4b5f-8a56-d3d5e3028dd6"
+      ]
+    },
+    "versionCode": 2
   }
 }

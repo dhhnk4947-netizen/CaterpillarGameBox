@@ -15,7 +15,7 @@
         "enableAdsense": false,
         "enableTestAd": false,
         "__version__": "1.0.1",
-        "AFPHostPropertyCode": "ca-host-pub-5396158963872751",
+        "AFPHostPropertyCode": "other",
         "AFPHostDomain": "douyougame.com",
         "otherAFPHostPropertyCode": "",
         "otherAFPDomain": ""
@@ -23,6 +23,15 @@
     },
     "taskOptionsMap": {
       "1788497693487": {
+        "enableAdsense": false,
+        "enableTestAd": false,
+        "__version__": "1.0.1",
+        "AFPHostPropertyCode": "other",
+        "AFPHostDomain": "douyougame.com",
+        "otherAFPHostPropertyCode": "",
+        "otherAFPDomain": ""
+      },
+      "1788782450645": {
         "enableAdsense": false,
         "enableTestAd": false,
         "__version__": "1.0.1",

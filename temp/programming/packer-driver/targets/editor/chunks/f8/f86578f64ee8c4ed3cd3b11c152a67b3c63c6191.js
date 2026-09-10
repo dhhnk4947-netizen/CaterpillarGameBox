@@ -1,7 +1,7 @@
-System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__unresolved_3"], function (_export, _context) {
+System.register(["__unresolved_0", "cc", "__unresolved_1"], function (_export, _context) {
   "use strict";
 
-  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, Camera, Component, UITransform, director, SingletonFactory, UIPage, ProxyData, GameItem, _crd;
+  var _reporterNs, _cclegacy, __checkObsolete__, __checkObsoleteInNamespace__, Camera, Component, UITransform, director, ProxyData, GameItem, _crd;
 
   function GameMapper(name, bundleName, path, viewPath) {
     return function (target) {
@@ -10,14 +10,6 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       target.prototype.SymbolPath = path;
       target.prototype.SymbolViewPath = viewPath;
     };
-  }
-
-  function _reportPossibleCrUseOfSingletonFactory(extras) {
-    _reporterNs.report("SingletonFactory", "../Util/SingletonFactory", _context.meta, extras);
-  }
-
-  function _reportPossibleCrUseOfUIPage(extras) {
-    _reporterNs.report("UIPage", "./UIPage", _context.meta, extras);
   }
 
   function _reportPossibleCrUseOfProxyData(extras) {
@@ -41,18 +33,14 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
       UITransform = _cc.UITransform;
       director = _cc.director;
     }, function (_unresolved_2) {
-      SingletonFactory = _unresolved_2.default;
-    }, function (_unresolved_3) {
-      UIPage = _unresolved_3.default;
-    }, function (_unresolved_4) {
-      ProxyData = _unresolved_4.default;
+      ProxyData = _unresolved_2.default;
     }],
     execute: function () {
       _crd = true;
 
       _cclegacy._RF.push({}, "83c7fnHLghDFokTGtyHng+q", "GameItem", undefined);
 
-      __checkObsolete__(['Camera', 'Component', 'UITransform', 'Node', 'director', 'find', 'js', 'v3']);
+      __checkObsolete__(['Camera', 'Component', 'UITransform', 'Node', 'director']);
 
       _export("default", GameItem = class GameItem extends Component {
         onMount() {}
@@ -160,12 +148,7 @@ System.register(["__unresolved_0", "cc", "__unresolved_1", "__unresolved_2", "__
           });
         }
 
-        close(cb) {
-          (_crd && SingletonFactory === void 0 ? (_reportPossibleCrUseOfSingletonFactory({
-            error: Error()
-          }), SingletonFactory) : SingletonFactory).getInst(_crd && UIPage === void 0 ? (_reportPossibleCrUseOfUIPage({
-            error: Error()
-          }), UIPage) : UIPage).stopGame(cb);
+        close(cb) {// SingletonFactory.getInst(UIPage).stopGame(cb);
         }
 
       });

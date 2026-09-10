@@ -50,6 +50,7 @@
             "scripts/Tea/data/ProxyData.ts",
             "scripts/Tea/decorators/tea.decorators.ts",
             "scripts/Tea/types/Tea.d.ts",
+            "Common/main.scene",
             "scene/main.scene",
             "Hall/textures/loading.png",
             "Hall/prefabs/view/HallView.prefab",

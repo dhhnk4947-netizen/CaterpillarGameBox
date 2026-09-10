@@ -9,18 +9,56 @@
       "web-mobile": {
         "configID": "48ed6c",
         "services": []
+      },
+      "android": {
+        "configID": "48ed6c",
+        "services": []
+      },
+      "ios": {
+        "configID": "48ed6c",
+        "services": []
       }
     },
     "taskOptionsMap": {
       "1788497693487": {
         "configID": "48ed6c",
         "services": []
+      },
+      "1788779636614": {
+        "configID": "48ed6c",
+        "services": []
+      },
+      "1788779764808": {
+        "configID": "48ed6c",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1788782450645": {
+        "configID": "48ed6c",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1788782810408": {
+        "configID": "48ed6c",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1788784712988": {
+        "configID": "48ed6c",
+        "services": [],
+        "__version__": "3.0.9"
+      },
+      "1789038723907": {
+        "configID": "48ed6c",
+        "services": [],
+        "__version__": "3.0.9"
       }
     },
     "__version__": "1.3.9"
   },
   "builder-options": {
     "configID": "48ed6c",
-    "services": []
+    "services": [],
+    "__version__": "3.0.9"
   }
 }

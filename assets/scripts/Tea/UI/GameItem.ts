@@ -1,6 +1,4 @@
-import { Camera, Component, UITransform, Node, director, find, js, v3 } from "cc";
-import SingletonFactory from "../Util/SingletonFactory";
-import UIPage from "./UIPage";
+import { Camera, Component, UITransform, Node, director } from "cc";
 import ProxyData from "../data/ProxyData";
 
 export default class GameItem extends Component {
@@ -91,7 +89,7 @@ export default class GameItem extends Component {
     }
 
     close(cb?): void {
-        SingletonFactory.getInst(UIPage).stopGame(cb);
+        // SingletonFactory.getInst(UIPage).stopGame(cb);
     }
 }
 
