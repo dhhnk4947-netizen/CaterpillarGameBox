@@ -1,0 +1,8 @@
+{
+    "version": "1.0.0",
+    "bundles": {
+        "Common": "506f4bcba9fa3a7db07e92e9ed180b20",
+        "Hall": "4e7878c76dbde6d859b0381d73307280",
+        "InsectXiaoxiaole": "1893b6d52aefb4086160dba09c12778d"
+    }
+}
