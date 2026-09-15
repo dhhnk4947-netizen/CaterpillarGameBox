@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
     "bundles": {
-        "Common": "eb1eab332fd934484958e35756c3c465",
+        "Common": "cbe752db7c28bce67fb662dbc2ab95ea",
         "Hall": "cd5fd91305e809534c736957eaa16d04",
         "InsectXiaoxiaole": "1893b6d52aefb4086160dba09c12778d"
     }
