@@ -72,6 +72,7 @@ function previewSkeleton(target) {
 
 //#region 全局挂载
 function GlobalMount(target) {
+    globalThis.TEA_DEBUG = false;
     globalThis.on = (key, cb, sort?, target?) => {
         SingletonFactory.getInst(EventManager).on(key, cb, sort, target);
     }
@@ -97,19 +98,19 @@ function GlobalMount(target) {
         return SingletonFactory.getInst(UIPage).stopGame(cb);
     }
     globalThis.LOG = (...args) => {
-        if (!DEV && !DEBUG)
+        if (!DEV && !DEBUG && !TEA_DEBUG)
             return;
         let api = LogApiManager.getMethodPath();
         LogApiManager.log(api[0], api[1], ...args)
     }
     globalThis.WARN = (...args) => {
-        if (!DEV && !DEBUG)
+        if (!DEV && !DEBUG && !TEA_DEBUG)
             return;
         let api = LogApiManager.getMethodPath();
         LogApiManager.warn(api[0], api[1], ...args)
     }
     globalThis.ERROR = (...args) => {
-        if (!DEV && !DEBUG)
+        if (!DEV && !DEBUG && !TEA_DEBUG)
             return;
         let api = LogApiManager.getMethodPath();
         LogApiManager.error(api[0], api[1], ...args)

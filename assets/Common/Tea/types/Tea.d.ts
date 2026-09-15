@@ -2,11 +2,13 @@ import { Asset, AssetManager } from "cc";
 import GameItem from "../UI/GameItem";
 
 declare global {
+    var TEA_DEBUG: boolean;
     var MainBundle: string;
     var UIPath: string;
     var MaxPage: number;
     var MaxFullPage: number;
     var MaxPopPage: number;
+    var RemoteMD5: { [key: string]: string };
 
     function initGame(path: string, bundle: string, cb: (...args: any[]) => void);
     function initGame(path: string, cb: (...args: any[]) => void);
@@ -122,4 +124,4 @@ declare global {
         }
     }
 }
-export {};
+export { };

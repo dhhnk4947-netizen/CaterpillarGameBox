@@ -1,5 +1,5 @@
 import { NodePool, Prefab, instantiate, Node } from "cc";
-import AssetsManager from "./AssetsManager";
+import TAssetManager from "./TAssetManager";
 import { Singleton } from "./SingletonFactory";
 import { DefaultValue, Value } from "../decorators/tea.decorators";
 
@@ -44,7 +44,7 @@ export default class ObjPoolManager {
             let abPackage = obj.abPackage || "";
             let size = obj.size || 0;
             let maxSize = obj.maxSize || this.defaultMaxSize;
-            AssetsManager.load(path, abPackage, Prefab, (err, prefab) => {
+            TAssetManager.load(path, abPackage, Prefab, (err, prefab) => {
                 if (err) {
                     completeCb && completeCb(err);
                     return;

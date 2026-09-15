@@ -1,5 +1,5 @@
-import { find, instantiate, Prefab, Node, UITransform, view, Script, assetManager, game, director, AssetManager, Canvas, js, ResolutionPolicy, screen } from "cc";
-import AssetsManager from "../Util/AssetsManager";
+import { find, instantiate, Prefab, Node, UITransform, view, game, director, Canvas, js, ResolutionPolicy } from "cc";
+import TAssetManager from "../Util/TAssetManager";
 import SingletonFactory, { Singleton } from "../Util/SingletonFactory";
 import { FullView, PopView, ResidentView, TipView, UIView } from "./UIView";
 import GameItem from "./GameItem";
@@ -91,7 +91,7 @@ export default class UIPage {
         if (size.height / size.width > 1.5) {
             view.setDesignResolutionSize(resolutionSize.width, resolutionSize.height, ResolutionPolicy.FIXED_WIDTH);
         } else {
-            view.setDesignResolutionSize(resolutionSize.width, resolutionSize.height, ResolutionPolicy.FIXED_HEIGHT);
+            view.setDesignResolutionSize(resolutionSize.width, resolutionSize.height, ResolutionPolicy.SHOW_ALL);
         }
 
         let oldGameRoot2D = find("GameNode2D");
@@ -248,7 +248,7 @@ export default class UIPage {
             return;
         }
 
-        AssetsManager.load(UIPath + uiName, MainBundle, (err, assets) => {
+        TAssetManager.load(UIPath + uiName, MainBundle, (err, assets) => {
             if (err) {
                 ERROR(err);
                 fun();
@@ -394,7 +394,7 @@ export default class UIPage {
 
         uiList.forEach(ui => {
             ui.abPackage = ui.abPackage ?? '';
-            AssetsManager.loadDir(ui.path, ui.abPackage, (err, assets) => {
+            TAssetManager.loadDir(ui.path, ui.abPackage, (err, assets) => {
                 if (err) {
                     ERROR("loadDir error:", err);
                     return;
@@ -436,7 +436,7 @@ export default class UIPage {
     }
 
     public preLoadAllUI(cb: Function = null): void {
-        AssetsManager.loadDir(UIPath, MainBundle, (err, assets) => {
+        TAssetManager.loadDir(UIPath, MainBundle, (err, assets) => {
             if (err) {
                 ERROR("loadDir error:", err);
                 return;
@@ -511,7 +511,7 @@ export default class UIPage {
     async startGame<T extends GameItem>(classType: { new(): T } | string, ...uiData) {
         let clazz = null;
         if (typeof classType == 'string') {
-            const bundle = await AssetsManager.getBundle(classType);
+            const bundle = await TAssetManager.getBundle(classType);
             if (!bundle) {
                 ERROR("Bundle not found: " + classType);
                 return;
@@ -532,7 +532,7 @@ export default class UIPage {
             gameItem.onInit(...uiData);
         }
         let loadView = new Promise((resolve, reject) => {
-            AssetsManager.loadDir(viewPath, bundleName, Prefab, (err, assets) => {
+            TAssetManager.loadDir(viewPath, bundleName, Prefab, (err, assets) => {
                 if (err) {
                     ERROR(err);
                     return;
@@ -573,7 +573,7 @@ export default class UIPage {
                     this.clearUIByBundle(currBundleName);
                 }, game.frameTime);
             }
-            AssetsManager.load(path, bundleName, Prefab, (err, assets) => {
+            TAssetManager.load(path, bundleName, Prefab, (err, assets) => {
                 if (err) {
                     ERROR(err);
                     return;
@@ -647,7 +647,7 @@ export default class UIPage {
             if (keys.length > 0) {
                 requestAnimationFrame(fun.bind(this));
             } else {
-                AssetsManager.releaseAll(bundleName)
+                TAssetManager.releaseAll(bundleName)
             }
         };
 

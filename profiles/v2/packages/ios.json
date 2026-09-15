@@ -11,7 +11,13 @@
       "mainBundleCompressionType": "merge_dep",
       "platform": "ios",
       "mainBundleIsRemote": false,
-      "server": "https://ggg"
+      "server": "https://ggg",
+      "scenes": [
+        {
+          "url": "db://assets/scene/main.scene",
+          "uuid": "8290b9a6-02a6-42aa-9bb4-a1783ccebaa8"
+        }
+      ]
     },
     "options": {
       "ios": {

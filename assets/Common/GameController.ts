@@ -1,8 +1,8 @@
-import { _decorator, Component, Node } from 'cc';
-import { MainMapper, Path } from './Tea/decorators/tea.decorators';
-import { BundleName, ViewName } from './tools/Tools';
-import { Autowired } from './Tea/Util/SingletonFactory';
+import { _decorator, Component, Node, sys } from 'cc';
+import { MainMapper } from './Tea/decorators/tea.decorators';
 import UIPage from './Tea/UI/UIPage';
+import { Autowired } from './Tea/Util/SingletonFactory';
+import { BundleName, ViewName } from './tools/Tools';
 const { ccclass, property } = _decorator;
 
 @ccclass('GameController')
@@ -13,9 +13,13 @@ export class GameController extends Component {
     mask: Node = null;
     protected start(): void {
         this.mask = this.node.getChildByName('mask');
-        this.uiPage.init(this.GameStart.bind(this));
+        TEA_DEBUG = true;
+        this.initGame();
     }
 
+    initGame() {
+        this.uiPage.init(this.GameStart.bind(this));
+    }
     private GameStart() {
         this.mask.setSiblingIndex(999);
         ResetTo(ViewName.HallView);

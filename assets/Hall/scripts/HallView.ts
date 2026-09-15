@@ -1,6 +1,6 @@
-import { _decorator, Component, director, easing, game, Node, Quat, quat, size, tween, Tween, UITransform, v3 } from 'cc';
-import { FullView, onMount } from '../../scripts/Tea/UI/UIView';
-import { Path } from '../../scripts/Tea/decorators/tea.decorators';
+import { _decorator, easing, game, Mask, Node, Quat, size, tween, Tween, UITransform } from 'cc';
+import { Path } from '../../Common/Tea/decorators/tea.decorators';
+import { FullView, onMount } from '../../Common/Tea/UI/UIView';
 const { ccclass, property } = _decorator;
 
 @ccclass('HallView')
@@ -15,8 +15,13 @@ export class HallView extends FullView {
     helpBtn: Node = null;
     @Path('btns/SettingBtn')
     settingBtn: Node = null;
-    @Path('Mask', UITransform)
+    @Path('loading/Mask', UITransform)
     animNode: UITransform = null;
+    @Path('loading/Mask', Mask)
+    animMask: Mask = null;
+    @Path('loading')
+    loading: Node = null;
+    @Path('btns/HelpBtn')
     @onMount
     mount() {
         this.openListBtn.on(Node.EventType.TOUCH_END, this.onClickOpenListBtn.bind(this));
@@ -34,22 +39,41 @@ export class HallView extends FullView {
     }
 
     onClickOpenListBtn() {
+        console.log("<-------- onClickOpenListBtn -------->");
+
+        // return;
+        this.loading.active = true;
         Tween.stopAllByTarget(this.animNode);
+        Tween.stopAllByTarget(this.animMask);
+        tween(this.animMask)
+            .set({ segments: 3 })
+            .to(0.8, { segments: 10 })
+            .start();
+
         tween(this.animNode)
             .set({ contentSize: size(2000, 2000) })
             .to(0.8, { contentSize: size(0, 0) })
             .delay(1)
             .call(() => {
                 Tween.stopAllByTarget(this.animNode);
+                Tween.stopAllByTarget(this.animMask);
+                tween(this.animMask)
+                    .set({ segments: 3 })
+                    .to(1.2, { segments: 20 })
+                    .start();
                 tween(this.animNode)
                     .set({ contentSize: size(0, 0) })
-                    .to(1.2, { contentSize: size(2000, 2000) })
+                    .to(1.2, { contentSize: size(2000, 2400) })
+                    .call(() => {
+                        this.loading.active = false;
+                    })
                     .start();
             })
             .start();
     }
 
     onClickQuitBtn() {
+        game.end();
     }
 
     onClickSettingBtn() {
