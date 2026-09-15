@@ -1,8 +1,4 @@
-System.register("chunks:///_virtual/InsectXiaoxiaole", [], function () {
-  return {
-    execute: function () {}
-  };
-});
+System.register("chunks:///_virtual/InsectXiaoxiaole",[],(function(){return{execute:function(){}}}));
 
 (function(r) {
   r('virtual:///prerequisite-imports/InsectXiaoxiaole', 'chunks:///_virtual/InsectXiaoxiaole'); 
