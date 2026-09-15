@@ -1,1 +1,224 @@
-{"importBase":"import","nativeBase":"native","name":"Hall","deps":[],"uuids":["02b88223f","071JFUQDxKhJ0hCiem7THl@f9941","071JFUQDxKhJ0hCiem7THl","096135cb0","09667c353","19667c353","30+CHDdfdDQrJUfwqodVRE@6c48a","30+CHDdfdDQrJUfwqodVRE@f9941","4aqjptNwpBcaGLi3qAOF/i@f9941","61mIN8ZJBO0KYIYDotjW8N@f9941","6eXH4614lHK7XRo1BN33w7@f9941","70Zu9QcIBEL4dpfAs09CIY@6c48a","70Zu9QcIBEL4dpfAs09CIY@f9941","8bU7tJ0+JDp56kEmB+hSvh@f9941","bda+gA66tJKqOq9vpicvea@f9941","beY7g5uZJOQZQmCst/8kVw@f9941","c9GqENmbJLQqt3NWJv0Vq4@f9941","ceVlVkv4dH3IGzIwawFxru@f9941","dc9tuY01BMgqIxEOyoh/OE","f18qMGnLdL3ptMq6vM9oxg@f9941","fckYqrGERKzZi9kk3kugtY@f9941","19667c353@6c48a","30+CHDdfdDQrJUfwqodVRE","4aqjptNwpBcaGLi3qAOF/i","61mIN8ZJBO0KYIYDotjW8N","6eXH4614lHK7XRo1BN33w7","70Zu9QcIBEL4dpfAs09CIY","8bU7tJ0+JDp56kEmB+hSvh","bda+gA66tJKqOq9vpicvea","beY7g5uZJOQZQmCst/8kVw","c9GqENmbJLQqt3NWJv0Vq4","ceVlVkv4dH3IGzIwawFxru","f18qMGnLdL3ptMq6vM9oxg","fckYqrGERKzZi9kk3kugtY"],"paths":{"1":["textures/HallView/cp4/spriteFrame",3,1],"2":["textures/HallView/cp4",1,1],"6":["textures/HallView/background/texture",2,1],"7":["textures/HallView/background/spriteFrame",3,1],"8":["textures/HallView/button_bg/spriteFrame",3,1],"9":["textures/HallView/title_panel/spriteFrame",3,1],"10":["textures/HallView/title/spriteFrame",3,1],"11":["textures/loading/texture",2,1],"12":["textures/loading/spriteFrame",3,1],"13":["textures/HallView/cp2/spriteFrame",3,1],"14":["textures/HallView/gameBox/spriteFrame",3,1],"15":["textures/HallView/quit/spriteFrame",3,1],"16":["textures/HallView/cp1/spriteFrame",3,1],"17":["textures/HallView/cp3/spriteFrame",3,1],"18":["prefabs/view/HallView",0,1],"19":["textures/HallView/help/spriteFrame",3,1],"20":["textures/HallView/setting/spriteFrame",3,1],"22":["textures/HallView/background",1,1],"23":["textures/HallView/button_bg",1,1],"24":["textures/HallView/title_panel",1,1],"25":["textures/HallView/title",1,1],"26":["textures/loading",1,1],"27":["textures/HallView/cp2",1,1],"28":["textures/HallView/gameBox",1,1],"29":["textures/HallView/quit",1,1],"30":["textures/HallView/cp1",1,1],"31":["textures/HallView/cp3",1,1],"32":["textures/HallView/help",1,1],"33":["textures/HallView/setting",1,1]},"scenes":{},"packs":{"02b88223f":[6,11,21],"096135cb0":[7,12,18],"09667c353":[1,8,9,10,13,14,15,16,17,19,20]},"versions":{"import":[],"native":[]},"redirect":[],"debug":false,"extensionMap":{},"hasPreloadScript":true,"dependencyRelationships":{},"types":["cc.Prefab","cc.ImageAsset","cc.Texture2D","cc.SpriteFrame"]}
+{
+    "importBase": "import",
+    "nativeBase": "native",
+    "name": "Hall",
+    "deps": [],
+    "uuids": [
+        "02b88223f",
+        "07d49154-403c-4a84-9d21-0a27a6ed31e5",
+        "07d49154-403c-4a84-9d21-0a27a6ed31e5@f9941",
+        "096135cb0",
+        "09667c353",
+        "19667c353",
+        "19667c353@6c48a",
+        "30f821c3-75f7-4342-b254-7f0aa8755444",
+        "30f821c3-75f7-4342-b254-7f0aa8755444@6c48a",
+        "30f821c3-75f7-4342-b254-7f0aa8755444@f9941",
+        "4aaa3a6d-370a-4171-a18b-8b7a80385fe2",
+        "4aaa3a6d-370a-4171-a18b-8b7a80385fe2@f9941",
+        "6198837c-6490-4ed0-a608-603a2d8d6f0d",
+        "6198837c-6490-4ed0-a608-603a2d8d6f0d@f9941",
+        "6e5c7e3a-d789-472b-b5d1-a3504ddf7c3b",
+        "6e5c7e3a-d789-472b-b5d1-a3504ddf7c3b@f9941",
+        "7066ef50-7080-442f-8769-7c0b34f42218",
+        "7066ef50-7080-442f-8769-7c0b34f42218@6c48a",
+        "7066ef50-7080-442f-8769-7c0b34f42218@f9941",
+        "8b53bb49-d3e2-43a7-9ea4-12607e852be1",
+        "8b53bb49-d3e2-43a7-9ea4-12607e852be1@f9941",
+        "bd6be800-ebab-492a-a3aa-f6fa6272f79a",
+        "bd6be800-ebab-492a-a3aa-f6fa6272f79a@f9941",
+        "be63b839-b992-4e41-9426-0acb7ff24570",
+        "be63b839-b992-4e41-9426-0acb7ff24570@f9941",
+        "c91aa10d-99b2-4b42-ab77-35626fd15ab8",
+        "c91aa10d-99b2-4b42-ab77-35626fd15ab8@f9941",
+        "ce565564-bf87-47dc-81b3-2306b0171aee",
+        "ce565564-bf87-47dc-81b3-2306b0171aee@f9941",
+        "dcf6db98-d350-4c82-a231-10eca887f384",
+        "f1f2a306-9cb7-4bde-9b4c-ababccf68c60",
+        "f1f2a306-9cb7-4bde-9b4c-ababccf68c60@f9941",
+        "fc918aab-1844-4acd-98bd-924de4ba0b58",
+        "fc918aab-1844-4acd-98bd-924de4ba0b58@f9941"
+    ],
+    "paths": {
+        "7066ef50-7080-442f-8769-7c0b34f42218": [
+            "textures/loading",
+            "cc.ImageAsset",
+            1
+        ],
+        "7066ef50-7080-442f-8769-7c0b34f42218@6c48a": [
+            "textures/loading/texture",
+            "cc.Texture2D",
+            1
+        ],
+        "7066ef50-7080-442f-8769-7c0b34f42218@f9941": [
+            "textures/loading/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "dcf6db98-d350-4c82-a231-10eca887f384": [
+            "prefabs/view/HallView",
+            "cc.Prefab",
+            1
+        ],
+        "30f821c3-75f7-4342-b254-7f0aa8755444": [
+            "textures/HallView/background",
+            "cc.ImageAsset",
+            1
+        ],
+        "30f821c3-75f7-4342-b254-7f0aa8755444@6c48a": [
+            "textures/HallView/background/texture",
+            "cc.Texture2D",
+            1
+        ],
+        "30f821c3-75f7-4342-b254-7f0aa8755444@f9941": [
+            "textures/HallView/background/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "4aaa3a6d-370a-4171-a18b-8b7a80385fe2": [
+            "textures/HallView/button_bg",
+            "cc.ImageAsset",
+            1
+        ],
+        "4aaa3a6d-370a-4171-a18b-8b7a80385fe2@f9941": [
+            "textures/HallView/button_bg/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "c91aa10d-99b2-4b42-ab77-35626fd15ab8": [
+            "textures/HallView/cp1",
+            "cc.ImageAsset",
+            1
+        ],
+        "c91aa10d-99b2-4b42-ab77-35626fd15ab8@f9941": [
+            "textures/HallView/cp1/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "8b53bb49-d3e2-43a7-9ea4-12607e852be1": [
+            "textures/HallView/cp2",
+            "cc.ImageAsset",
+            1
+        ],
+        "8b53bb49-d3e2-43a7-9ea4-12607e852be1@f9941": [
+            "textures/HallView/cp2/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "ce565564-bf87-47dc-81b3-2306b0171aee": [
+            "textures/HallView/cp3",
+            "cc.ImageAsset",
+            1
+        ],
+        "ce565564-bf87-47dc-81b3-2306b0171aee@f9941": [
+            "textures/HallView/cp3/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "07d49154-403c-4a84-9d21-0a27a6ed31e5": [
+            "textures/HallView/cp4",
+            "cc.ImageAsset",
+            1
+        ],
+        "07d49154-403c-4a84-9d21-0a27a6ed31e5@f9941": [
+            "textures/HallView/cp4/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "bd6be800-ebab-492a-a3aa-f6fa6272f79a": [
+            "textures/HallView/gameBox",
+            "cc.ImageAsset",
+            1
+        ],
+        "bd6be800-ebab-492a-a3aa-f6fa6272f79a@f9941": [
+            "textures/HallView/gameBox/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "f1f2a306-9cb7-4bde-9b4c-ababccf68c60": [
+            "textures/HallView/help",
+            "cc.ImageAsset",
+            1
+        ],
+        "f1f2a306-9cb7-4bde-9b4c-ababccf68c60@f9941": [
+            "textures/HallView/help/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "be63b839-b992-4e41-9426-0acb7ff24570": [
+            "textures/HallView/quit",
+            "cc.ImageAsset",
+            1
+        ],
+        "be63b839-b992-4e41-9426-0acb7ff24570@f9941": [
+            "textures/HallView/quit/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "fc918aab-1844-4acd-98bd-924de4ba0b58": [
+            "textures/HallView/setting",
+            "cc.ImageAsset",
+            1
+        ],
+        "fc918aab-1844-4acd-98bd-924de4ba0b58@f9941": [
+            "textures/HallView/setting/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "6e5c7e3a-d789-472b-b5d1-a3504ddf7c3b": [
+            "textures/HallView/title",
+            "cc.ImageAsset",
+            1
+        ],
+        "6e5c7e3a-d789-472b-b5d1-a3504ddf7c3b@f9941": [
+            "textures/HallView/title/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ],
+        "6198837c-6490-4ed0-a608-603a2d8d6f0d": [
+            "textures/HallView/title_panel",
+            "cc.ImageAsset",
+            1
+        ],
+        "6198837c-6490-4ed0-a608-603a2d8d6f0d@f9941": [
+            "textures/HallView/title_panel/spriteFrame",
+            "cc.SpriteFrame",
+            1
+        ]
+    },
+    "scenes": {},
+    "packs": {
+        "02b88223f": [
+            "30f821c3-75f7-4342-b254-7f0aa8755444@6c48a",
+            "7066ef50-7080-442f-8769-7c0b34f42218@6c48a",
+            "19667c353@6c48a"
+        ],
+        "096135cb0": [
+            "30f821c3-75f7-4342-b254-7f0aa8755444@f9941",
+            "7066ef50-7080-442f-8769-7c0b34f42218@f9941",
+            "dcf6db98-d350-4c82-a231-10eca887f384"
+        ],
+        "09667c353": [
+            "07d49154-403c-4a84-9d21-0a27a6ed31e5@f9941",
+            "4aaa3a6d-370a-4171-a18b-8b7a80385fe2@f9941",
+            "6198837c-6490-4ed0-a608-603a2d8d6f0d@f9941",
+            "6e5c7e3a-d789-472b-b5d1-a3504ddf7c3b@f9941",
+            "8b53bb49-d3e2-43a7-9ea4-12607e852be1@f9941",
+            "bd6be800-ebab-492a-a3aa-f6fa6272f79a@f9941",
+            "be63b839-b992-4e41-9426-0acb7ff24570@f9941",
+            "c91aa10d-99b2-4b42-ab77-35626fd15ab8@f9941",
+            "ce565564-bf87-47dc-81b3-2306b0171aee@f9941",
+            "f1f2a306-9cb7-4bde-9b4c-ababccf68c60@f9941",
+            "fc918aab-1844-4acd-98bd-924de4ba0b58@f9941"
+        ]
+    },
+    "versions": {
+        "import": [],
+        "native": []
+    },
+    "redirect": [],
+    "debug": true,
+    "extensionMap": {},
+    "hasPreloadScript": true,
+    "dependencyRelationships": {}
+}
