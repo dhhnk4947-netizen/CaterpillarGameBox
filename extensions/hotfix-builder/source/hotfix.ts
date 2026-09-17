@@ -82,8 +82,9 @@ function copyRemoteBuildFiles(
             fs.cpSync(sourcePath, path.join(targetDir, md5), { recursive: true, force: true });
         }
     }
+    const now = Date.now();
 
-    fs.copyFileSync(manifestPath, path.join(targetDir, path.basename(manifestPath)));
+    fs.copyFileSync(manifestPath, path.join(targetDir, `${now}.manifest`));
 
     console.log('Copy remote build files success:', targetDir);
 }
@@ -114,8 +115,7 @@ function main(platform: string, version: string, paths: HotfixBuildPaths): void 
         console.log(bundleName, '=>', md5);
     }
 
-    const now = Date.now();
-    const outputPath = path.join(paths.assets, `${now}.manifest`);
+    const outputPath = path.join(paths.assets, `version.manifest`);
     fs.writeFileSync(outputPath, JSON.stringify(result, null, 4));
     console.log('Generate bundle manifest success:', outputPath);
 

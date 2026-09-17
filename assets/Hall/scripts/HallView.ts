@@ -46,8 +46,8 @@ export class HallView extends FullView {
         Tween.stopAllByTarget(this.animNode);
         Tween.stopAllByTarget(this.animMask);
         tween(this.animMask)
-            .set({ segments: 3 })
-            .to(0.8, { segments: 10 })
+            .set({ segments: 10 })
+            .to(0.8, { segments: 2 })
             .start();
 
         tween(this.animNode)
@@ -59,7 +59,7 @@ export class HallView extends FullView {
                 Tween.stopAllByTarget(this.animMask);
                 tween(this.animMask)
                     .set({ segments: 3 })
-                    .to(1.2, { segments: 20 })
+                    .to(1.2, { segments: 5 })
                     .start();
                 tween(this.animNode)
                     .set({ contentSize: size(0, 0) })

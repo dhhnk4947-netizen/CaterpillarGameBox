@@ -1,7 +1,8 @@
-import { _decorator, Asset, assetManager, Component, sys } from 'cc';
+import { _decorator, assetManager, Component, native, sys } from 'cc';
 const { ccclass, property } = _decorator;
 
 const VersionManifest = "version.manifest";
+const PackagedVersionManifest = "assets/version.manifest";
 
 @ccclass('Main')
 export class Main extends Component {
@@ -45,6 +46,18 @@ export class Main extends Component {
         });
     }
 
+    private ArrayBufferToString(_data: ArrayBuffer): string {
+        const uint8Array = new Uint8Array(_data)
+        const decoder = new TextDecoder('utf-8')
+        return decoder.decode(uint8Array)
+    }
+
+    // 读文件之前,文件一定存在
+    private ReadStringFromFile(filePath: string): string {
+        const fileArrayBuffer = native.fileUtils.getDataFromFile(filePath)
+        return this.ArrayBufferToString(fileArrayBuffer)
+    }
+
     getBundleConfig(version: string) {
         const platform = sys.platform.toLowerCase();
         const url = `${assetManager.downloader.remoteServerAddress}${platform}/${version}.manifest`;
@@ -52,11 +65,30 @@ export class Main extends Component {
 
         this.file(url, (res) => {
             const json = JSON.parse(res);
-            Object.keys(json.bundles).forEach(key => {
-                globalThis.RemoteMD5[key] = json.bundles[key];
-            })
-            this.initGame();
+            this.versionContrast(json);
         });
+    }
+
+    versionContrast(json) {
+        const fullPath = native.fileUtils.fullPathForFilename(PackagedVersionManifest);
+        console.log("fullPath =====>", fullPath);
+
+        if (!fullPath) {
+            console.error("Packaged version manifest was not found:", PackagedVersionManifest);
+            return;
+        }
+
+        const pkgStrData = this.ReadStringFromFile(fullPath);
+        console.log("pkgStrData =====>", pkgStrData);
+        const pkgJsonData = JSON.parse(pkgStrData)
+        if (pkgJsonData.version != json.version) {
+            sys.openURL("")
+            return;
+        }
+        Object.keys(json.bundles).forEach(key => {
+            globalThis.RemoteMD5[key] = json.bundles[key];
+        })
+        this.initGame();
     }
 
     file(url, sCb) {

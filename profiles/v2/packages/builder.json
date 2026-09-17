@@ -12,9 +12,9 @@
       "asyncFunctions": true
     },
     "buildPath": "project://build",
-    "outputName": "android",
+    "outputName": "ios",
     "mainBundleCompressionType": "merge_dep",
-    "platform": "android",
+    "platform": "ios",
     "mainBundleIsRemote": false,
     "server": "https://raw.githubusercontent.com/dhhnk4947-netizen/CaterpillarGameBox/remote/",
     "scenes": [
@@ -40,15 +40,15 @@
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2026-9-15 17:52:12 build success in 7 s!",
-        "detailMessage": "// ---- build task cocos-service：onAfterCompressSettings ----\r",
+        "message": "2026-9-15 21:24:32 build success in 6 s!",
+        "detailMessage": "// ---- build task cocos-service：onAfterBuild ----\r",
         "options": {
           "name": "GameBox",
           "server": "",
           "engineModulesConfigKey": "defaultConfig",
           "platform": "web-mobile",
           "buildPath": "project://build",
-          "debug": true,
+          "debug": false,
           "buildMode": "normal",
           "mangleProperties": false,
           "md5Cache": false,
@@ -102,16 +102,16 @@
           "__version__": "1.3.9",
           "logDest": "project://temp/builder/log/web-mobile9-15-2026 16-29.log"
         },
-        "time": "9-15-2026 17:52:05",
+        "time": "9-15-2026 21:24:25",
         "dirty": false
       },
-      "1789459123091": {
+      "1789558187326": {
         "type": "build",
-        "id": "1789459123091",
+        "id": "1789558187326",
         "progress": 1,
         "state": "success",
         "stage": "build",
-        "message": "2026-9-15 19:31:12 build success in 4 s!",
+        "message": "2026-9-16 20:52:28 build success in 7 s!",
         "detailMessage": "// ---- build task cocos-service：onAfterCompressSettings ----\r",
         "options": {
           "name": "GameBox",
@@ -171,9 +171,80 @@
           },
           "packages": {},
           "__version__": "1.3.9",
-          "logDest": "project://temp/builder/log/android9-15-2026 16-58.log"
+          "logDest": "project://temp/builder/log/android9-16-2026 20-29.log"
         },
-        "time": "9-15-2026 19:31:07",
+        "time": "9-16-2026 20:52:20",
+        "dirty": false
+      },
+      "1789562554356": {
+        "type": "build",
+        "id": "1789562554356",
+        "progress": 1,
+        "state": "success",
+        "stage": "build",
+        "message": "2026-9-16 21:42:43 build success in 9 s!",
+        "detailMessage": "// ---- build task cocos-service：onAfterBuild ----\r",
+        "options": {
+          "name": "GameBox",
+          "server": "https://raw.githubusercontent.com/dhhnk4947-netizen/CaterpillarGameBox/remote/",
+          "engineModulesConfigKey": "defaultConfig",
+          "platform": "ios",
+          "buildPath": "project://build",
+          "debug": false,
+          "buildMode": "normal",
+          "mangleProperties": false,
+          "md5Cache": false,
+          "skipCompressTexture": false,
+          "sourceMaps": false,
+          "overwriteProjectSettings": {
+            "macroConfig": {
+              "cleanupImageCache": "inherit-project-setting"
+            },
+            "includeModules": {
+              "physics": "inherit-project-setting",
+              "physics-2d": "inherit-project-setting",
+              "gfx-webgl2": "off"
+            }
+          },
+          "nativeCodeBundleMode": "asmjs",
+          "polyfills": {
+            "asyncFunctions": false
+          },
+          "experimentalEraseModules": false,
+          "startSceneAssetBundle": false,
+          "bundleConfigs": [],
+          "inlineEnum": true,
+          "useBuiltinServer": false,
+          "md5CacheOptions": {
+            "excludes": [],
+            "includes": [],
+            "replaceOnly": [],
+            "handleTemplateMd5Link": true
+          },
+          "mainBundleIsRemote": false,
+          "mainBundleCompressionType": "merge_dep",
+          "useSplashScreen": true,
+          "bundleCommonChunk": false,
+          "packAutoAtlas": true,
+          "startScene": "ee6d97bc-bfe8-4e04-9558-e0a0ff312d17",
+          "outputName": "ios",
+          "taskName": "ios",
+          "scenes": [
+            {
+              "url": "db://assets/main.scene",
+              "uuid": "ee6d97bc-bfe8-4e04-9558-e0a0ff312d17"
+            }
+          ],
+          "wasmCompressionMode": false,
+          "binGroupConfig": {
+            "threshold": 16,
+            "enable": false
+          },
+          "packages": {},
+          "__version__": "1.3.9",
+          "logDest": "project://temp/builder/log/ios9-16-2026 21-42.log"
+        },
+        "time": "9-16-2026 21:42:34",
         "dirty": false
       }
     }
