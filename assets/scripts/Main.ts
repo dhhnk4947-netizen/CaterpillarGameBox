@@ -1,4 +1,4 @@
-import { _decorator, assetManager, Component, native, sys } from 'cc';
+import { _decorator, AssetManager, assetManager, Component, Label, native, Node, Sprite, sys } from 'cc';
 const { ccclass, property } = _decorator;
 
 const VersionManifest = "version.manifest";
@@ -6,6 +6,33 @@ const PackagedVersionManifest = "assets/version.manifest";
 
 @ccclass('Main')
 export class Main extends Component {
+    dafaultPanel: Node = null;
+    downloadLayer: Node = null;
+    loadingLayer: Node = null;
+    downloadBtn: Node = null;
+    quitBtn: Node = null;
+    progressBar: Sprite = null;
+    progressLabel: Label = null;
+
+    timeStep: number = 0.05;
+    progressVal: number = 0;
+    finished: boolean = false;
+
+    protected onLoad(): void {
+        this.dafaultPanel = this.node.getChildByName("DefaultPanel");
+        this.downloadLayer = this.dafaultPanel.getChildByName("download");
+        this.loadingLayer = this.dafaultPanel.getChildByName("loading");
+
+        this.downloadBtn = this.downloadLayer.getChildByName("download");
+        this.quitBtn = this.downloadLayer.getChildByName("quit");
+
+        this.progressBar = this.loadingLayer.getChildByName("Bar").getComponent(Sprite);
+        this.progressLabel = this.loadingLayer.getChildByName("Label").getComponent(Label);
+
+        this.downloadBtn.on(Node.EventType.TOUCH_END, null);
+        this.quitBtn.on(Node.EventType.TOUCH_END, this.initGame.bind(this));
+    }
+
     protected start(): void {
         const isApp = sys.platform == sys.Platform.ANDROID || sys.platform == sys.Platform.IOS;
         console.log("sys.platform ====>", sys.platform);
@@ -15,9 +42,16 @@ export class Main extends Component {
     }
 
     initGame() {
+        this.downloadLayer.active = false;
+        this.loadingLayer.active = true;
+        this.progressBar.fillRange = 0;
+        this.progressLabel.string = "0%";
+        this.progressVal = 0;
+        this.timeStep = 0.05;
+        this.finished = false;
+
         const bundleName = "Common";
         let bundleUrl = bundleName;
-
         if (globalThis.RemoteMD5[bundleName] && globalThis.RemoteMD5[bundleName].length > 0) {
             const platform = sys.platform.toLowerCase();
             bundleUrl = `${assetManager.downloader.remoteServerAddress}${platform}/${globalThis.RemoteMD5[bundleName]}`;
@@ -26,7 +60,8 @@ export class Main extends Component {
             if (err) {
                 return console.error(err);
             }
-            this.node.addComponent("GameController");
+            this.finished = true;
+            this.timeStep = 0.3;
         });
     }
 
@@ -81,13 +116,13 @@ export class Main extends Component {
         const pkgStrData = this.ReadStringFromFile(fullPath);
         console.log("pkgStrData =====>", pkgStrData);
         const pkgJsonData = JSON.parse(pkgStrData)
-        if (pkgJsonData.version != json.version) {
-            sys.openURL("")
-            return;
-        }
         Object.keys(json.bundles).forEach(key => {
             globalThis.RemoteMD5[key] = json.bundles[key];
         })
+        if (pkgJsonData.version != json.version) {
+            this.downloadLayer.active = true;
+            return;
+        }
         this.initGame();
     }
 
@@ -111,5 +146,20 @@ export class Main extends Component {
             console.error("FILE ERROR ==>", url);
             console.error(error);
         })
+    }
+
+    protected update(dt: number): void {
+        if (this.progressVal < 1) {
+            this.progressVal += dt * this.timeStep;
+            this.progressBar.fillRange = this.progressVal;
+            this.progressLabel.string = `${~~(this.progressVal * 100)}%`;
+        }
+        if (this.finished && this.progressVal >= 1) {
+            this.finished = false;
+            this.node.addComponent("GameController");
+
+            this.dafaultPanel.destroy();
+            this.destroy();
+        }
     }
 }

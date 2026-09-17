@@ -62,7 +62,7 @@
         "__version__": "1.0.0"
       },
       "1789558187326": {
-        "versionInput": "1.0.0",
+        "versionInput": "1.0.1",
         "__version__": "1.0.0"
       },
       "1789561045723": {
@@ -78,6 +78,10 @@
     "options": {
       "web-mobile": {
         "testInput": ""
+      },
+      "android": {
+        "versionInput": "1.0.1",
+        "__version__": "1.0.0"
       }
     }
   }
